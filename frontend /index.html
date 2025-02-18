@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoRide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="#" class="ecoride-logo">EcoRide</a>
+
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Accueil</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/covoiturages">Commandes</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/connexion">connexion</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">S'inscrire</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="form-container" display="none">
+      <h2 class="form-titre">Inscrivez-Vous</h2>
+
+      <form id="form-inscription">
+        <div class="form-group">
+          <label class="form-label" for="name">Nom complet</label>
+          <input
+            type="text"
+            class="form-input"
+            id="name"
+            name="name"
+            placeholder="Jean Dupont"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input
+            type="text"
+            class="form-input"
+            id="email"
+            name="email"
+            placeholder="jean.dupont@exemple.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Mot de passe</label>
+          <input
+            type="text"
+            class="form-input"
+            id="motdepasse"
+            name="motdepasse"
+            placeholder="12345667"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="rue">Rue</label>
+          <input
+            type="text"
+            class="form-input"
+            id="rue"
+            name="rue"
+            placeholder="20 rue champs elysée"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="rue">Ville</label>
+          <input
+            type="text"
+            class="form-input"
+            id="paris"
+            name="paris"
+            placeholder="ex: paris"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="phone">Téléphone</label>
+          <input
+            type="text"
+            class="form-input"
+            id="phone"
+            name="phone"
+            placeholder="06 12 34 56 78"
+            pattern="[0-9]{10}"
+          />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="submit-btn">S'inscrire</button>
+        </div>
+      </form>
+    </div>
+
+    <section class="container">
+      <div class="presentation-container">
+        <div id="presentation-eco">
+          <h1>
+            VOYAGER <br />
+            EN MODE PRESERVATION <br />
+            ET ECO.
+          </h1>
+          <p>
+            Bienvenue sur EcoRide, votre plateforme dédiée au covoiturage
+            écologique. Notre mission est de faciliter vos déplacements
+            quotidiens tout en réduisant votre empreinte carbone. En partageant
+            vos trajets avec d'autres utilisateurs, vous contribuez activement à
+            la préservation de l'environnement et réalisez des économies
+            significatives. <br />
+            <br />
+            Rejoignez dès aujourd'hui la communauté EcoRide et participez à la
+            transition vers une mobilité plus durable.
+          </p>
+        </div>
+        <div>
+          <img
+            src="./asset/image/covoiturage 2.jpg"
+            alt="Covoiturage en action"
+          />
+          <img src="./asset/image/image de fond.jpg " alt="Nature préservée" />
+          <img src="./asset/image/comm eco.jpg" alt="Communauté EcoRide" />
+        </div>
+      </div>
+    </section>
+
+    <main class="recherche-trajet">
+      <h2>
+        Vous avez vos plans, <br />
+        On a vos bons plans.
+      </h2>
+      <div class="form">
+        <form action="" method="get">
+          <input
+            type="text"
+            name="depart"
+            placeholder="Adresse de départ"
+            required
+          />
+          <input
+            type="text"
+            name="arrivee"
+            placeholder="Adresse d’arrivée"
+            required
+          />
+          <input type="date" name="date" required />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- Vue des covoiturages -->
+    <section class="recherche">
+      <h2>Résultats de recherche</h2>
+      <div class="covoiturage">
+        <img src="chauffeur.jpg" alt="Photo du chauffeur" />
+        <p>Chauffeur : <strong>JeanDupont</strong> ⭐⭐⭐⭐</p>
+        <p>Places restantes : 2</p>
+        <p>Prix : 10€</p>
+        <p>Départ : 10/03/2024 - 08:00</p>
+        <p>Arrivée : 10/03/2024 - 10:00</p>
+        <p>Voyage écologique : ✅</p>
+        <button>Détail</button>
+      </div>
+    </section>
+
+    <div class="temoignages">
+      <h2 class="temoignages-title">Ils nous font confiance</h2>
+
+      <div class="temoignage-container">
+        <div class="temoignage-card">
+          <p class="temoignage-text">
+            "Une expérience exceptionnelle avec EcoRide ! Le service est rapide
+            et l'application très intuitive."
+          </p>
+
+          <div class="temoignage-author">
+            <img src="./asset/image/photo temoignage 2.jpg" alt="" />
+            <div class="temoignage-info">
+              <span class="temoignage-name">Marie Dubois</span>
+              <span class="temoignage-role"
+                >Utilisatrice depuis Janvier 2024</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="temoignage-card">
+          <p class="temoignage-text">
+            "Solution parfaite pour mes trajets quotidiens. Écologique et
+            économique, je recommande !"
+          </p>
+
+          <div class="temoignage-author">
+            <img src="./asset/image/photo temoignage.jpg" alt="" />
+            <div class="temoignage-info">
+              <span class="temoignage-name">Adeyemi Julius</span>
+              <span class="temoignage-role">Client profesionnel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="temoignage-card">
+          <p class="temoignage-text">
+            "Des conducteurs toujours à l'heure et des véhicules bien
+            entretenus. Top !"
+          </p>
+
+          <div class="temoignage-author">
+            <img src="./asset/image/photo temoignage 4.jpg" alt="" />
+            <div class="temoinage-info">
+              <span class="temoignage-name">Elisabeth Leroy</span>
+              <span class="temoignage-role">Cliente fidèle</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="temoignage-card">
+          <p class="temoignage-text">
+            Rien a dire. Service impeccable, poctualité, Top !
+          </p>
+
+          <div class="temoignage-author">
+            <img src="./asset/image/photo.temoignage 3.jpg" alt="" />
+            <div class="temoignage-info">
+              <span class="temoignage-name">Pierre Martin</span>
+              <span class="temoignage-role">Client fidel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+
+      <div class="contact-info">
+        <p><strong>Email :</strong>contact@ecoride.fr</p>
+        <p><strong>Téléphone :</strong>08 09 07 06 05</p>
+        <p><strong>Adresse :</strong>20 rue Champs Elysée, Paris cédex 08</p>
+        <p><strong>Horaires :</strong> Du lundi au vendredi, 9h - 18h</p>
+        <p style="text-align: center">Tous droits réservés © EcoRide 2025</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Envoyez-nous un message</h3>
+        <form action="" method="post">
+          <div class="form-group">
+            <label for="contact-name">Nom :</label>
+            <input type="text" id="contact-name" name="contact-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email :</label>
+            <input type="text" id="contact-email" name="contact-email" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message :</label>
+            <textarea
+              name="contact-message"
+              id="contact-message"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+      <div class="partenaire">
+        <h3>Nos partenaires</h3>
+        <ul>
+          <li>
+            <img src="./asset/image/investlogo1blue.png" alt="partenaire1" />
+          </li>
+          <li>
+            <img src="./asset/image/investlogo2blue.png" alt="partenaire2" />
+          </li>
+          <li>
+            <img src="./asset/image/investlogo3blue.png" alt="partenaire3" />
+          </li>
+        </ul>
+      </div>
+
+      <div class="boite">
+        <div class="reseaux-sociaux">
+          <h3>Suivez Nous</h3>
+          <ul>
+            <li><i class="fa-brands fa-square-facebook"></i></li>
+            <li><i class="fa-brands fa-square-instagram"></i></li>
+            <li><i class="fa-brands fa-square-twitter"></i></li>
+            <li><i class="fa-brands fa-square-pinterest"></i></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

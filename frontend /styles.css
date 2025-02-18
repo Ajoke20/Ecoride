@@ -1,0 +1,495 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Animation d'entrée */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  background: white;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  animation: slideDown 0.5s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.ecoride-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: hsl(145, 60%, 51%);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ecoride-logo:hover {
+  color: hsl(145, 63%, 42%);
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  position: relative;
+  list-style: none;
+}
+
+.active {
+  color: green;
+}
+
+.nav-link {
+  color: hsl(145, 63%, 42%);
+  text-decoration: none;
+  padding: 7px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+/* Animation au survol */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: #2ecc71;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link:hover {
+  color: #2ecc71;
+}
+
+/* Animation active */
+.nav-link:active {
+  transform: scale(0.95);
+}
+
+.form-container {
+  display: none;
+  border-radius: 10px;
+  box-shadow: hsl(120, 46%, 54%);
+}
+
+.form-titre {
+  text-align: center;
+  margin: 20px;
+  color: #2ecc71;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.form-inscription {
+  display: flex;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.form-label {
+  display: block;
+  margin: 5px;
+  color: #1b5e20;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #2ecc71;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  background: #2ecc71;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Section de présentation */
+
+.container {
+  margin: 30px;
+  padding: 70px;
+  border-radius: 20px;
+}
+
+section {
+  background-color: #2ecc71;
+  text-align: center;
+}
+#presentation-eco {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+#presentation-eco p {
+  font-style: italic;
+  color: whitesmoke;
+  text-wrap: wrap;
+  text-align: center;
+  font-size: 1.1em;
+  margin: 40px;
+}
+
+img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 20px;
+}
+section img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+.recherche-trajet {
+  display: none;
+  margin: 30px;
+  color: antiquewhite;
+}
+
+.recherche-trajet h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+form input[type="text"],
+form input[type="date"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1b5e20;
+}
+
+/* Vue des covoiturages */
+
+.recherche {
+  display: none;
+  border-radius: 20px;
+  margin: 30px;
+  padding: 30px;
+}
+
+section h2 {
+  margin-top: 50px;
+}
+.covoiturage {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: left;
+}
+
+.covoiturage img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 15px;
+}
+
+.covoiturage p {
+  margin: 5px 0;
+}
+
+.covoiturage button {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.temoignages {
+  max-width: 1200px;
+  padding: 64px 32px;
+  background-color: whites;
+}
+
+.temoignages-title {
+  text-align: center;
+  color: hsl(120, 37%, 58%);
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.temoignage-container {
+  position: relative;
+  height: 300px; /* Ajustez la hauteur selon le contenu */
+  overflow: hidden;
+  padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.temoignage-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  background-color: white;
+  padding: 13px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.temoignage-card.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.temoignage-card:hover {
+  transform: scale(1.1);
+}
+
+.temoignage-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #2ecc71;
+}
+
+.temoignage-author {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.temoignage-info {
+  flex-direction: column;
+}
+
+.temoignage-name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2ecc71;
+}
+
+.temoignage-role {
+  color: #2ecc71;
+}
+
+#contact {
+  background-color: hsl(120, 37%, 58%);
+  padding: 60px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#contact h2 {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 30px;
+  color: whitesmoke;
+}
+
+.contact-info p,
+strong {
+  color: whitesmoke;
+  margin: 10px 0;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h3 {
+  color: whitesmoke;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: green;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  resize: none;
+  border: 2px solid green;
+}
+
+.form-group button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.form-group button:hover {
+  transform: scale(1.1);
+  color: whitesmoke;
+  background-color: #2ecc71;
+  transition: 1.5s ease-in-out;
+}
+
+footer {
+  background-color: hsl(120, 37%, 58%);
+  margin: 30px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  border-radius: 10px;
+}
+
+footer h3 {
+  color: whitesmoke;
+  margin: 40px;
+  align-items: left;
+  letter-spacing: 1px;
+}
+
+.partenaire ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.partenaire img {
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+.reseaux-sociaux {
+  text-align: center;
+}
+
+.reseaux-sociaux h3 {
+  letter-spacing: 1px;
+}
+
+.reseaux-sociaux ul {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
+
+.reseaux-sociaux i {
+  font-size: 2.5em;
+  color: whitesmoke;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.reseaux-sociaux i:hover {
+  color: greenyellow;
+  transform: scale(1.5);
+  transition: 1.6 ease-in-out;
+}
