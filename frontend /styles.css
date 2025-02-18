@@ -323,11 +323,6 @@ section h2 {
   cursor: pointer;
 }
 
-.temoignage-card.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 .temoignage-card:hover {
   transform: scale(1.1);
 }
